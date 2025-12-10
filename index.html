@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacta Saúde</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="logo-pacta-saude.jpg" alt="Logo do site">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="contato.html">Contato</a>
+                <a href="emergencia.html" class="nav-link"
+                    style="background:#ff4444; padding:10px 20px; border-radius:25px;">Emergência</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </header>
+    <main><!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 id="hero-title">Cuidando da sua saúde com excelência</h1>
+                    <p id="hero-subtitle">Atendimento humanizado e tecnologia de ponta para você e sua família</p>
+                    <div class="cta-buttons">
+                        
+                       <a  href='agendamento.html'class="btn btn-primary">Agendar Consulta</a>
+                        <a href="servicos.html" class="btn btn-secondary">
+                            Conheça nossos serviços
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+            <section class="quick-access">
+                <div class="quick-access-content">
+                    <div class="quick-card" ><a  href='agendamento.html'class="btn btn-primary">
+                        <div class="quick-card-icon">📅</div>
+                        <h3>Agendamento Online</h3>
+                        <p>Agende suas consultas de forma rápida e prática</p></a>
+                    </div>
+                    <div class="quick-card"><a  href='resultados.html'class="btn btn-primary">
+                        <div class="quick-card-icon">📋</div>
+                        <h3>Resultados de Exames</h3>
+                        <p>Acesse seus resultados com segurança</p></a>
+                    </div>
+                    <div class="quick-card"> <a  href='prontosocorro.html'class="btn btn-primary">
+                        <div class="quick-card-icon">🚑</div>
+                        <h3>Pronto Socorro 24h</h3>
+                        <p>Atendimento de emergência sempre disponível</p></a>
+                    </div>
+                    <div class="quick-card"><a  href='planos.html'class="btn btn-primary">
+                        <div class="quick-card-icon">💳</div>
+                        <h3>Planos de Saúde</h3>
+                        <p>Conheça nossas opções de convênios</p></a>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function navigateTo(page) {
+                    window.location.href = page;
+                }
+            </script>
+
+        </div>
+        </section>
