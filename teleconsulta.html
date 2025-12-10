@@ -10,27 +10,33 @@
 
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="../logo/logo-pacta-saude.jpg" alt="Logo Pacta Saúde">
-      </div>
-      <ul class="menu">
-        <li><a href="../index.html" class="active">Início</a></li>
-        <li><a href="../prontosocorro/prontosocorro.html">Pronto Socorro</a></li>
-        <li><a href="..nutricao/nutricao.html">Nutrição</a></li>
-        <li><a href="../saudemental/saudemental.html">Saúde mental</a></li>
-        <li><a href="../sobre/sobre.html">Sobre</a></li>
-        <li><a href="../contato/contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+     <header>
+    <div class="header-content">
+        <a href="index.html" class="logo">
+            <img src="../logo/logo-pacta-saude.jpg" alt="Logo do site">
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html" class="active">Início</a>
+            <a href="../sobre/sobre.html">Sobre</a>
+            <a href="../prontosocorro/prontosocorro.html">Pronto Socorro</a>
+            <a href="../agendamento/agendamento.html" class="nav-link">Agendamento</a>
+            <a href="../nutriçao/nutriçao.html">Nutrição</a>
+            <a href="../saudemental/saudemental.html" class="nav-link">Saúde Mental</a>
+            <a href="../contato/contato.html">Contato</a>
+             <a href="../emergencia/emergencia.html" class="nav-link"
+                style="background:#ff4444; padding:10px 20px; border-radius:25px;">Emergência</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+</header>
 
   <main class="content">
     <section class="hero">
       <h1>Teleconsulta online</h1>
       <p>Consulte de onde estiver — com praticidade e segurança.</p>
-      <button class="btn-primary">Agendar Consulta</button>
+      <a href="../agendamento/agendamento.html" class="btn-primary">Agendar Consulta</a>
     </section>
 
     <section class="info">

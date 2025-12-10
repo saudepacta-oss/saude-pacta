@@ -1,54 +1,94 @@
 /* Services Section */
 
-header {
-  background: linear-gradient(135deg, #0066cc, #004999);
-  color: white;
-}
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo img {
-  width: 90px;
-  height: auto;
-  
-}
-nav {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
+ /* HEADER */
+  header {
+      background: linear-gradient(135deg, #0077dd 0%, #004a99 100%);
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+  /* CONTAINER DO HEADER */
+  .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
 
-nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
+  /* LOGO */
+  .logo img {
+      width: 100px;
+      height: auto;
+      transition: 0.3s ease;
+  }
 
-nav a.active {
-    background: rgba(255, 255, 255, 0.2);
-}
+  .logo img:hover {
+      transform: scale(1.05);
+  }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
+  /* NAV LINKS (DESKTOP) */
+  nav.nav-links {
+      display: flex;
+      gap: 25px;
+  }
+
+  nav.nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+  }
+
+  nav.nav-links a:hover {
+      background: rgba(255, 255, 255, 0.15);
+  }
+
+  nav.nav-links a.active {
+      background: rgba(255, 255, 255, 0.25);
+  }
+
+  /* BOTÃO MENU MOBILE */
+  .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+  }
+
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+      nav.nav-links {
+          position: fixed;
+          top: 70px;
+          right: -100%;
+          background: #004a99;
+          height: 100%;
+          width: 250px;
+          flex-direction: column;
+          gap: 20px;
+          padding: 40px 20px;
+          transition: 0.3s;
+      }
+
+      nav.nav-links.show {
+          right: 0;
+      }
+
+      .menu-toggle {
+          display: block;
+      }
+  }
 
 .services {
     padding: 60px 20px;
