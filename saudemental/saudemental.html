@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúde Mental</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="stylesheet" href="saudemental.css">
+
+   
+
+ </head>
+
+ <body>
+     <header>
+    <div class="header-content">
+        <a href="index.html" class="logo">
+            <img src="../logo/logo-pacta-saude.jpg" alt="Logo do site">
+        </a>
+
+        <nav class="nav-links">
+            <a href="../index.html" class="active">Início</a>
+            <a href="../sobre/sobre.html">Sobre</a>
+            <a href="../servicos/servicos.html">Serviços</a>
+            <a href="../agendamento/agendamento.html" class="nav-link">Agendamento</a>
+            <a href="../contato/contato.html">Contato</a>
+             <a href="../emergencia/emergencia.html" class="nav-link"
+                style="background:#ff4444; padding:10px 20px; border-radius:25px;">Emergência</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+</header>
+
+  <main>
+   <section>
+    <h2>O que é Saúde Mental</h2>
+    <p>Saúde mental é o equilíbrio emocional e psicológico que permite lidar com as exigências da vida, manter relacionamentos saudáveis e tomar decisões conscientes. Assim como o corpo precisa de cuidados, a mente também necessita de atenção e prevenção para evitar o surgimento de doenças mentais.</p>
+   </section>
+
+   <section>
+    <h2>A Importância de Cuidar da Saúde Mental</h2>
+    <p>Cuidar da saúde mental é essencial para o bem-estar geral. Uma mente saudável contribui para o bom funcionamento do corpo, melhora o desempenho no trabalho e nos estudos, fortalece os vínculos sociais e aumenta a qualidade de vida.</p>
+   </section>
+
+   <section>
+    <h2>Principais Doenças Mentais e Suas Causas</h2>
+    <ul>
+     <li><strong>Depressão:</strong> tristeza profunda, perda de interesse e cansaço constante. Causas: fatores genéticos, traumas e estresse.</li>
+     <li><strong>Ansiedade:</strong> preocupação excessiva e constante. Causas: pressões sociais, traumas e predisposição genética.</li>
+     <li><strong>Transtorno Bipolar:</strong> oscilações extremas de humor. Causas: fatores genéticos e alterações químicas no cérebro.</li>
+     <li><strong>Esquizofrenia:</strong> afeta a percepção da realidade. Causas: fatores genéticos e uso de substâncias psicoativas.</li>
+     <li><strong>Transtornos Alimentares:</strong> ligados à autoimagem e fatores emocionais.</li>
+     <li><strong>Transtorno de Estresse Pós-Traumático:</strong> surge após experiências traumáticas, com sintomas como flashbacks e ansiedade intensa.</li>
+    </ul>
+   </section>
+
+   <section>
+    <h2>Como Cuidar da Saúde Mental</h2>
+    <ul>
+     <li><strong>Atividades Físicas:</strong> Praticar exercícios regularmente.</li>
+     <li><strong>Alimentação:</strong> Manter uma dieta equilibrada.</li>
+     <li><strong>Descanso:</strong> Dormir bem e respeitar o sono.</li>
+     <li><strong>Socialização:</strong> Evitar o isolamento social.</li>
+     <li><strong>Ajuda Profissional:</strong> Buscar apoio quando necessário.</li>
+     <li><strong>Autoconhecimento:</strong> Praticar reflexão e reconhecer limites.</li>
+    </ul>
+   </section>
+
+   <button id="toggleTips">Mostrar Dica de Bem-Estar</button>
+   <p id="tip" class="hidden"></p>
+  </main>
+
+  <footer>
+   <p>© 2025 Saúde Fácil - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const tips = [
+      "💙 Dedique 10 minutos do seu dia para meditar e relaxar a mente.",
+      "🌿 Faça uma caminhada ao ar livre para reduzir o estresse.",
+      "📝 Escreva um diário de gratidão e anote 3 coisas positivas do seu dia.",
+      "🎨 Pratique um hobby criativo para expressar suas emoções.",
+      "☕ Desconecte-se das telas por 1 hora antes de dormir.",
+      "🤝 Converse com alguém de confiança sobre seus sentimentos.",
+      "🎵 Ouça música relaxante para acalmar a mente.",
+      "🧘 Pratique respiração profunda: inspire por 4s, segure por 4s, expire por 4s."
+    ];
+
+    const tipElement = document.getElementById('tip');
+    const toggleButton = document.getElementById('toggleTips');
+    let currentTipIndex = -1;
+
+    toggleButton.addEventListener('click', () => {
+      if (tipElement.classList.contains('hidden')) {
+        currentTipIndex = Math.floor(Math.random() * tips.length);
+        tipElement.textContent = tips[currentTipIndex];
+        tipElement.classList.remove('hidden');
+        toggleButton.textContent = 'Mostrar Outra Dica';
+      } else {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * tips.length);
+        } while (newIndex === currentTipIndex && tips.length > 1);
+        currentTipIndex = newIndex;
+        tipElement.textContent = tips[currentTipIndex];
+      }
+    });
+
+    const defaultConfig = {
+      header_gradient_start: "#4facfe",
+      header_gradient_end: "#00f2fe",
+      background_gradient_start: "#667eea",
+      background_gradient_end: "#764ba2",
+      section_border_color: "#4facfe"
+    };
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const headerGradientStart = config.header_gradient_start || defaultConfig.header_gradient_start;
+          const headerGradientEnd = config.header_gradient_end || defaultConfig.header_gradient_end;
+          const bgGradientStart = config.background_gradient_start || defaultConfig.background_gradient_start;
+          const bgGradientEnd = config.background_gradient_end || defaultConfig.background_gradient_end;
+          const sectionBorderColor = config.section_border_color || defaultConfig.section_border_color;
+
+          document.querySelector('header').style.background = `linear-gradient(135deg, ${headerGradientStart} 0%, ${headerGradientEnd} 100%)`;
+          document.body.style.background = `linear-gradient(135deg, ${bgGradientStart} 0%, ${bgGradientEnd} 100%)`;
+          
+          document.querySelectorAll('section').forEach(section => {
+            section.style.borderLeftColor = sectionBorderColor;
+          });
+
+          document.querySelectorAll('h2').forEach(h2 => {
+            h2.style.color = sectionBorderColor;
+          });
+
+          document.querySelectorAll('ul li').forEach(li => {
+            li.style.borderLeftColor = sectionBorderColor;
+          });
+
+          const button = document.querySelector('button');
+          button.style.background = `linear-gradient(135deg, ${headerGradientStart} 0%, ${headerGradientEnd} 100%)`;
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.header_gradient_start || defaultConfig.header_gradient_start,
+              set: (value) => {
+                config.header_gradient_start = value;
+                window.elementSdk.setConfig({ header_gradient_start: value });
+              }
+            },
+            {
+              get: () => config.header_gradient_end || defaultConfig.header_gradient_end,
+              set: (value) => {
+                config.header_gradient_end = value;
+                window.elementSdk.setConfig({ header_gradient_end: value });
+              }
+            },
+            {
+              get: () => config.background_gradient_start || defaultConfig.background_gradient_start,
+              set: (value) => {
+                config.background_gradient_start = value;
+                window.elementSdk.setConfig({ background_gradient_start: value });
+              }
+            },
+            {
+              get: () => config.background_gradient_end || defaultConfig.background_gradient_end,
+              set: (value) => {
+                config.background_gradient_end = value;
+                window.elementSdk.setConfig({ background_gradient_end: value });
+              }
+            },
+            {
+              get: () => config.section_border_color || defaultConfig.section_border_color,
+              set: (value) => {
+                config.section_border_color = value;
+                window.elementSdk.setConfig({ section_border_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["page_title", config.page_title || defaultConfig.page_title]
+        ])
+      });
+    }
+  </script>
+
+  <script>
+  (function(){
+    function c(){
+      var b=a.contentDocument||a.contentWindow.document;
+      if(b){
+        var d=b.createElement('script');
+        d.innerHTML="window.__CF$cv$params={r:'9a4af9ae926097cc',t:'MTc2NDE3Njc3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+        b.getElementsByTagName('head')[0].appendChild(d)
+      }
+    }
+    if(document.body){
+      var a=document.createElement('iframe');
+      a.height=1;
+      a.width=1;
+      a.style.position='absolute';
+      a.style.top=0;
+      a.style.left=0;
+      a.style.border='none';
+      a.style.visibility='hidden';
+      document.body.appendChild(a);
+      if('loading'!==document.readyState)c();
+      else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);
+      else{
+        var e=document.onreadystatechange||function(){};
+        document.onreadystatechange=function(b){
+          e(b);
+          'loading'!==document.readyState&&(document.onreadystatechange=e,c())
+        }
+      }
+    }
+  })();
+  </script>
+
+ </body>
+</html>
