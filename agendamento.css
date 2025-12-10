@@ -1,0 +1,235 @@
+/* ================================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f4f9ff;
+    color: #003366;
+}
+  /* Header */
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        nav a.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+/* NAVIGATION */
+#mainNav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: #ebebeb;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* ================================
+   AGENDAMENTO SECTION
+================================ */
+.agendamento-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #003366;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* FORM */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #003366;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aac7e6;
+    border-radius: 8px;
+    margin-top: 5px;
+    background: #f7fbff;
+    transition: border .3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* TIME SLOTS */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.time-slot {
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #aac7e6;
+    background: #eef6ff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.time-slot:hover {
+    background: #d7eaff;
+}
+
+.time-slot.selected {
+    background: #007bff;
+    border-color: #005bb5;
+    color: white;
+}
+
+/* BUTTON */
+.btn-primary {
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    background: #005bb5;
+}
+
+/* SUCCESS MESSAGE */
+.success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: #e2f7e2;
+    border-left: 5px solid #28a745;
+    border-radius: 8px;
+    color: #1d7a32;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    #mainNav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

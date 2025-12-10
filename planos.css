@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: #f4f9ff;
+    color: #003366;
+}
+
+header {
+    background: white;
+    padding: 20px 40px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    font-size: 24px;
+    font-weight: 700;
+    color: #003366;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 25px;
+}
+
+.plan-card {
+    background: #eef6ff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #aac7e6;
+}
+
+.plan-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.plan-card p {
+    color: #044a85;
+}
+.price {
+    font-weight: 700;
+    color: #005bb5;
+    font-size: 20px;
+    margin: 8px 0 15px 0;
+}
