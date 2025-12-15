@@ -225,6 +225,8 @@ nav.nav-links a.active {
     }
 }
 
+/* MOBILE */
+@media (max-width: 768px) {}
     .menu-toggle {
         display: block;
     }
