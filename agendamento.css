@@ -76,29 +76,9 @@ body {
       cursor: pointer;
   }
 
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-      nav.nav-links {
-          position: fixed;
-          top: 70px;
-          right: -100%;
-          background: #004a99;
-          height: 100%;
-          width: 250px;
-          flex-direction: column;
-          gap: 20px;
-          padding: 40px 20px;
-          transition: 0.3s;
-      }
 
-      nav.nav-links.show {
-          right: 0;
-      }
+  
 
-      .menu-toggle {
-          display: block;
-      }
-  }
 
 
 .agendamento-section {
@@ -226,15 +206,22 @@ body {
 
     .time-slots {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* MOBILE */
+    }/* ================================
+   MOBILE
+================================ */
 @media (max-width: 768px) {
 
+    /* HEADER */
+    .header-content {
+        position: relative;
+    }
+
+    /* BOTÃO HAMBURGUER */
     .menu-toggle {
         display: block;
     }
 
+    /* MENU MOBILE */
     nav.nav-links {
         position: absolute;
         top: 100%;
@@ -246,6 +233,7 @@ body {
         gap: 15px;
         padding: 20px 0;
         display: none;
+        z-index: 999;
     }
 
     nav.nav-links.active {
@@ -255,7 +243,31 @@ body {
     nav.nav-links a {
         width: 90%;
         text-align: center;
-        padding: 12px;
-        border-radius: 8px;
+        padding: 14px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    /* AGENDAMENTO */
+    .agendamento-section {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    /* TIME SLOTS */
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 14px;
     }
 }
+
+}
+   
