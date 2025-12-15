@@ -7,15 +7,6 @@
     <title>Pacta Saúde</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('nav');
-
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
-
 
 <body>
     <header>
@@ -43,8 +34,8 @@
                     <h1 id="hero-title">Cuidando da sua saúde com excelência</h1>
                     <p id="hero-subtitle">Atendimento humanizado e tecnologia de ponta para você e sua família</p>
                     <div class="cta-buttons">
-                        
-                       <a  href='agendamento.html'class="btn btn-primary">Agendar Consulta</a>
+
+                        <a href='agendamento.html' class="btn btn-primary">Agendar Consulta</a>
                         <a href="servicos.html" class="btn btn-secondary">
                             Conheça nossos serviços
                         </a>
@@ -54,38 +45,52 @@
             </section>
             <section class="quick-access">
                 <div class="quick-access-content">
-                    <div class="quick-card" ><a  href='agendamento.html'class="btn btn-primary">
-                        <div class="quick-card-icon">📅</div>
-                        <h3>Agendamento Online</h3>
-                        <p>Agende suas consultas de forma rápida e prática</p></a>
+                    <div class="quick-card"><a href='agendamento.html' class="btn btn-primary">
+                            <div class="quick-card-icon">📅</div>
+                            <h3>Agendamento Online</h3>
+                            <p>Agende suas consultas de forma rápida e prática</p>
+                        </a>
                     </div>
-                    <div class="quick-card"><a  href='resultados.html'class="btn btn-primary">
-                        <div class="quick-card-icon">📋</div>
-                        <h3>Resultados de Exames</h3>
-                        <p>Acesse seus resultados com segurança</p></a>
+                    <div class="quick-card"><a href='resultados.html' class="btn btn-primary">
+                            <div class="quick-card-icon">📋</div>
+                            <h3>Resultados de Exames</h3>
+                            <p>Acesse seus resultados com segurança</p>
+                        </a>
                     </div>
-                    <div class="quick-card"> <a  href='prontosocorro.html'class="btn btn-primary">
-                        <div class="quick-card-icon">🚑</div>
-                        <h3>Pronto Socorro 24h</h3>
-                        <p>Atendimento de emergência sempre disponível</p></a>
+                    <div class="quick-card"> <a href='prontosocorro.html' class="btn btn-primary">
+                            <div class="quick-card-icon">🚑</div>
+                            <h3>Pronto Socorro 24h</h3>
+                            <p>Atendimento de emergência sempre disponível</p>
+                        </a>
                     </div>
-                    <div class="quick-card"><a  href='planos.html'class="btn btn-primary">
-                        <div class="quick-card-icon">💳</div>
-                        <h3>Planos de Saúde</h3>
-                        <p>Conheça nossas opções de convênios</p></a>
+                    <div class="quick-card"><a href='planos.html' class="btn btn-primary">
+                            <div class="quick-card-icon">💳</div>
+                            <h3>Planos de Saúde</h3>
+                            <p>Conheça nossas opções de convênios</p>
+                        </a>
                     </div>
                 </div>
             </section>
 
             <script>
-                
+
                 function navigateTo(page) {
                     window.location.href = page;
                 }
+
+                const menuToggle = document.getElementById('menuToggle');
+                const navLinks = document.querySelector('.nav-links');
+
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+
             </script>
- 
- 
+
+
         </div>
 
     </main>
+
 </body>
