@@ -129,6 +129,21 @@
   <p>Febre muito alta, vômitos intensos, dificuldade respiratória</p>
   </div>
   </div>
+   <script>
+
+                function navigateTo(page) {
+                    window.location.href = page;
+                }
+
+                const menuToggle = document.getElementById('menuToggle');
+                const navLinks = document.querySelector('.nav-links');
+
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+
+            </script>
 </body>
 
 </html>

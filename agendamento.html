@@ -94,6 +94,23 @@
                <div class="success-message" id="agendSuccessMessage">
                   ✓ Agendamento realizado com sucesso! Entraremos em contato para confirmar.
                </div>
+
+              <script>
+
+                function navigateTo(page) {
+                    window.location.href = page;
+                }
+
+                const menuToggle = document.getElementById('menuToggle');
+                const navLinks = document.querySelector('.nav-links');
+
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+
+            </script>
+
 </body>
 
 </html>
