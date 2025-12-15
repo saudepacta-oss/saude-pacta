@@ -76,10 +76,29 @@ body {
       cursor: pointer;
   }
 
-  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+      nav.nav-links {
+          position: fixed;
+          top: 70px;
+          right: -100%;
+          background: #004a99;
+          height: 100%;
+          width: 250px;
+          flex-direction: column;
+          gap: 20px;
+          padding: 40px 20px;
+          transition: 0.3s;
+      }
 
-  
+      nav.nav-links.show {
+          right: 0;
+      }
 
+      .menu-toggle {
+          display: block;
+      }
+  }
 
 
 .agendamento-section {
@@ -207,36 +226,5 @@ body {
 
     .time-slots {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav.nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(135deg, #0077dd 0%, #004a99 100%);
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 0;
-        display: none;
-    }
-
-    nav.nav-links.active {
-        display: flex;
-    }
-
-    nav.nav-links a {
-        width: 90%;
-        text-align: center;
-        padding: 12px;
-        border-radius: 8px;
     }
 }
