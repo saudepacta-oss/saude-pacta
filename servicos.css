@@ -1,4 +1,8 @@
-/* Services Section */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
  /* HEADER */
   header {
@@ -56,39 +60,7 @@
       background: rgba(255, 255, 255, 0.25);
   }
 
-  /* BOTÃO MENU MOBILE */
-  .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
-  }
-
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-      nav.nav-links {
-          position: fixed;
-          top: 70px;
-          right: -100%;
-          background: #004a99;
-          height: 100%;
-          width: 250px;
-          flex-direction: column;
-          gap: 20px;
-          padding: 40px 20px;
-          transition: 0.3s;
-      }
-
-      nav.nav-links.show {
-          right: 0;
-      }
-
-      .menu-toggle {
-          display: block;
-      }
-  }
+  .servicos
 
 .services {
     padding: 60px 20px;
