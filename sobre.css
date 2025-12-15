@@ -235,3 +235,34 @@
           font-size: 28px;
       }
   }
+  /* MOBILE */
+   @media (max-width: 768px) {
+
+       .menu-toggle {
+           display: block;
+       }
+
+       nav.nav-links {
+           position: absolute;
+           top: 100%;
+           left: 0;
+           width: 100%;
+           background: linear-gradient(135deg, #0077dd 0%, #004a99 100%);
+           flex-direction: column;
+           align-items: center;
+           gap: 15px;
+           padding: 20px 0;
+           display: none;
+       }
+
+       nav.nav-links.active {
+           display: flex;
+       }
+
+       nav.nav-links a {
+           width: 90%;
+           text-align: center;
+           padding: 12px;
+           border-radius: 8px;
+       }
+   }
